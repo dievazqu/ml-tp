@@ -1,4 +1,4 @@
-function cell = e_1a()
+function cell = e_2a()
 	load fisheriris;
 	a{1} = meas(1:50, :);
 	a{2} = meas(51:100, :);
@@ -12,9 +12,5 @@ end
 	
 function mat = metrics(data)
 	mat = [mean(data);
-		std(data);
-		min(data);
-		max(data);
-		max(data) - min(data)];
+		std(data,1)];
 end
-	
