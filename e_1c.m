@@ -24,7 +24,6 @@ end
 
 
 function [trainingSet, testingSet] =  getTrainingSet(data, k)
-
   idx = randperm(size(data, 1));
   trainingSet = data(idx(1:k), :);
   testingSet = data(idx(k+1:end), :);
