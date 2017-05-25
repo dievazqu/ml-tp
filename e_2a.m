@@ -12,5 +12,5 @@ end
 	
 function mat = metrics(data)
 	mat = [mean(data);
-		std(data,1)];
+		std(data,1).^2];
 end

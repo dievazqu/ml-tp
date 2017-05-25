@@ -14,7 +14,5 @@ end
 	
 function err = error(data)
 	med = mean(data);
-	for i=1:size(med,2)
-		err(i) = sum((data(:,i) - med(i)).^2) / size(data,1);
-	end
+	err = std(data,1).^2 ./ size(data,1);
 end
