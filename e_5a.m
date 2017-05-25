@@ -1,8 +1,5 @@
-function e_5a(alpha)
+function e_5a()
 	data = load('plumas.txt');
 	D = data(:, 2) - data(:, 3);
-	n = size(D,1);
-	lim_inf = tinv(alpha/2, n-1)
-	T = sqrt(n)*mean(D)/std(D)
-	lim_sup = tinv(1-alpha/2, n-1)
+	[h,p,ci,stats] = ttest(D)
 end
