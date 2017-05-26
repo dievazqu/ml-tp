@@ -1,8 +1,8 @@
-function [a b] = e_6d()
+function e_6d()
 	data_ = load('brain.txt');
 	data_ = [data_(1:13,:);
 		data_(16:24, :);
-		data_(26:end, :)]
+		data_(26:end, :)];
 	data = log(data_);
 	x_ = mean(data(:,1));
 	y_ = mean(data(:,2));
@@ -23,6 +23,9 @@ function [a b] = e_6d()
 	plot(data(:,1),data(:,2), 'r.');
 	hold on;
 	v = [-5:13];
-	plot(v,v*b+a, 'b.');
+	plot(v,v*b+a, 'b');
+	xlabel('log(Peso del cuerpo) [Kg]');
+	ylabel('log(Peso del cerebro) [g]');
+	bon = bondad(data(:,2), data(:,1)*b+a)
 	hold off;
 end

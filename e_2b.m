@@ -1,5 +1,3 @@
-% Esto me parece que esta mal.
-% Hay que preguntar el viernes que viene.
 function cell = e_2b()
 	load fisheriris;
 	a{1} = meas(1:50, :);

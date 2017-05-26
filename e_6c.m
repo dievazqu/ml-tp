@@ -1,4 +1,4 @@
-function [a b] = e_6c()
+function e_6c()
 	data_ = load('brain.txt');
 	data = log(data_);
 	x_ = mean(data(:,1));
@@ -20,8 +20,10 @@ function [a b] = e_6c()
 	plot(data(:,1),data(:,2), 'r.');
 	hold on;
 	v = [-5:13];
-	plot(v,v*b+a, 'b.');
-	p = polyfit(data(:,1), data(:,2), 2)
+	plot(v,v*b+a, 'b');
+	xlabel('log(Peso del cuerpo) [Kg]');
+	ylabel('log(Peso del cerebro) [g]');
+	bon = bondad(data(:,2), data(:,1)*b+a)
 	hold off
 end
 
