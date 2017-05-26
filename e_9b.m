@@ -7,16 +7,18 @@ function e_9b(dim, pct)
 
     corrmat = corrcoef(hald);
     [m i] = max(abs(corrmat(end,1:end-1)));
-    xUsed = [xUsed i];
+    xUsed = [xUsed i]
     xs = xs(xs~=i);
 
     minI = 0;
     while (length(xUsed)<dim)
         X = e_9b_X(xUsed, ingredients);
         currR = e_9b_res(X, y)*(1-pct);
+        e_9b_res(X, y)
         minI = -1;
         for i=xs
-            R = e_9b_res([X ingredients(:,i)], y);
+            fprintf(1, 'probando para %d\n', i);
+            R = e_9b_res([X ingredients(:,i)], y)
             if (R < currR) 
                 currR = R;
                 minI = i;
@@ -26,10 +28,11 @@ function e_9b(dim, pct)
         if (minI == -1)
             break;
         end
-        xUsed = [xUsed minI];
+        fprintf(1, 'la mejor opcion es: %d\n', minI);
+        xUsed = [xUsed minI]
         xs = xs(xs~=minI);
     end
-
+    e_9b_res(X, y)
     xUsed
 end
 

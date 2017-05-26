@@ -8,6 +8,8 @@ function e_7c()
     hold on;
     plot(x, yp, 'Color', 'red');
     hold off;
+    xlabel('Decadas')
+    ylabel('Population (x1e6)');
 
     b = bondad(y, yp);
 
