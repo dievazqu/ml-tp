@@ -1,6 +1,6 @@
 function e_10a()
     load hald;
     [coeff score latent] = princomp(ingredients);
-    score
+    coeff
     varexp = latent'/sum(latent)
 end
