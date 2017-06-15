@@ -29,4 +29,31 @@ name{1} = 'Setosa';
 		ylabel('Ancho del petalo [cm]');
 		
 	end
+	
+	figure;
+	i = 1;
+	
+	mat = [h{1}(:,i), h{2}(:,i), h{3}(:,i)];
+	boxplot(mat, 'Labels',{name{1}, name{2}, name{3}})
+	title('Comparacion entre especies');
+	ylabel('Largo del sepalo [cm]');
+	figure;
+	i = 2;
+	mat = [h{1}(:,i), h{2}(:,i), h{3}(:,i)];
+	boxplot(mat, 'Labels',{name{1}, name{2}, name{3}})
+	title('Comparacion entre especies');
+	ylabel('Ancho del sepalo [cm]');
+	figure;
+	i = 3;
+	mat = [h{1}(:,i), h{2}(:,i), h{3}(:,i)];
+	boxplot(mat, 'Labels',{name{1}, name{2}, name{3}})
+	title('Comparacion entre especies');
+	ylabel('Largo del petalo [cm]');
+	figure;
+	i = 4;
+	mat = [h{1}(:,i), h{2}(:,i), h{3}(:,i)];
+	boxplot(mat, 'Labels',{name{1}, name{2}, name{3}})
+	title('Comparacion entre especies');
+	ylabel('Ancho del petalo [cm]');
+	
 end
