@@ -2,7 +2,7 @@ function [model reg] = e_9b()
     load hald;
 
     % Como se interpretan estos resultados?
-    [b,se,pval,inmodel,stats,nextstep,history] = stepwisefit(ingredients, heat);
+    [b,se,pval,inmodel,stats,nextstep,history] = stepwisefit(ingredients, heat)
 
 
     model = [stats.intercept; b(find(inmodel>0))];
